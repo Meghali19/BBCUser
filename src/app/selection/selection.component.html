@@ -1,0 +1,12 @@
+
+<div>
+    <label>Select Payment Method:</label>
+    <br><br>
+    <input type="radio" id="creditDebit" name="paymentMethod" [(ngModel)]="selectedMethod" value="creditDebit">
+    <label for="creditDebit">Credit/Debit</label>
+    <br><br>
+    <input type="radio" id="wallet" name="paymentMethod" [(ngModel)]="selectedMethod" value="wallet">
+    <label for="wallet">Wallet</label> <br><br>
+    <button (click)="proceedToPay()">Proceed to Pay</button>
+  </div>
+  

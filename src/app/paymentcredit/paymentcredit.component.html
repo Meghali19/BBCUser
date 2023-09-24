@@ -1,0 +1,47 @@
+<!-- <p>paymentcredit works!</p> -->
+
+<br><br>
+<div class="container">
+    <h2>Payment Details</h2>
+    <form (ngSubmit)="onSubmit()" #paymentForm="ngForm">
+      <div class="form-group">
+        <label for="cardNumber">Card Number</label>
+        <input
+          type="number"
+          id="cardNumber"
+          name="cardNumber"
+          class="form-control"
+          placeholder="Enter card number"
+          [(ngModel)]="payment.cardNumber"
+          required
+        >
+      </div>
+      <div class="form-group">
+        <label for="cvv">CVV Number</label>
+        <input
+          type="number"
+          id="cvv"
+          name="cvv"
+          class="form-control"
+          placeholder="Enter CVV"
+          [(ngModel)]="payment.cvv"
+          required
+        >
+      </div>
+      <div class="form-group">
+        <label for="expiryDate">Expiry Date</label>
+        <input
+          type="text"
+          id="expiryDate"
+          name="expiryDate"
+          class="form-control"
+          placeholder="MM/YY"
+          [(ngModel)]="payment.expiryDate"
+          required
+        >
+      </div>
+      <button (click)="onSubmit()" type="submit" class="btn btn-primary">Make Payment</button>
+    </form>
+  </div>
+  
+
